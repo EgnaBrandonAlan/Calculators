@@ -16,8 +16,8 @@ def calculate_GPA(grade_points, semester_amount):
 def grade_point_conversion(letter_grades):
     # Dictionary of letter grades to grade points (4.0 Scale)
     grade_points = {
-        "A": 4.0,
         "A+": 4.0,
+        "A": 4.0,
         "A-": 3.7,
         "B+": 3.3,
         "B": 3.0,
