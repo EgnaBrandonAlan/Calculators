@@ -5,6 +5,11 @@ print("You will also receive feedback on your GPA.")
 
 
 # GPA Calculator function
+"""
+A function takes in parameters, which act as placeholders for values which will be passed into the function.
+The parameters in this function are grade_points and semester_amount.
+This function uses the grade points, which is a list, and semester amount to calculate your GPA.
+"""
 def calculate_GPA(grade_points, semester_amount):
     # Sum the grade point values and use the averaging formula
     total_points = sum(grade_points)
@@ -15,6 +20,10 @@ def calculate_GPA(grade_points, semester_amount):
 # Converting letter grades to grade points function
 def grade_point_conversion(letter_grades):
     # Dictionary of letter grades to grade points (4.0 Scale)
+    """
+    A dictionary corresponds one value to another, called key-value pairs.
+    In this case, each letter is a key and the grade points are the value.
+    """
     grade_points = {
         "A+": 4.0,
         "A": 4.0,
@@ -31,6 +40,12 @@ def grade_point_conversion(letter_grades):
         "F": 0.0
     }
     # Check if the inputted value is in the dictionary (not case sensitive) and return the point value
+    """
+    An if statement checks for a condition. In this case, we are checking for if the letter grade which
+    has been input is part of our dictionary grade_points.
+    The .upper() method makes the input uppercase regardless, making our code case insensitive.
+    We then return the value of the grade point.
+    """
     if letter_grades.upper() in grade_points:
         return grade_points[letter_grades.upper()]
     # Error handling for if a value is inputted which is not in the dictionary
